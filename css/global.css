@@ -11,14 +11,15 @@ Danger: #EF4444
 
 :root{
     --bg: #F5F7FA;
-    --card: #FFFFFF;
+    --card: #D6E0EA;
     --text: #1E1E1E;
     --text-light: #6B7280;
     --primary: #1F3A5F;
-    --container: hsl(217, 33%, 67%);
+    --container: #99adcc;
     --border: #1E293B;
     --header: #1E293B;
     --accent: #b1c0d8;
+    --value: #0e3b9a;
 }
 
 body.dark{
@@ -31,6 +32,7 @@ body.dark{
     --border: #F5F7FA;
     --header: #1E293B;
     --accent: #1F3A5F;
+    --value: #38BDF8;
 }
 
 .switch{
@@ -38,7 +40,6 @@ body.dark{
     display: inline-block;
     width: 50px;
     height: 26px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .switch input{
@@ -82,7 +83,8 @@ body{
     font-size: 1em;
     background: var(--bg);
     color: var(--text);
-    
+    margin: 0;
+    padding: 0;
 }
 
 *{
@@ -243,8 +245,50 @@ body{
 .card-container{
     background-color: var(--container);
     margin: 20px;
-    max-width: 100%;
-    height: 100vh;
-    border: 0;
+    padding: 20px;
+    min-height: 400px;
     border-radius: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card{
+    height: 400px;
+    flex: 1 0 350px;
+    background-color: var(--card);
+    border: 1px solid var(--text);
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    color: var(--text);
+}
+
+#chartCard, #transactionCard{
+    flex: 1 1 48%;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    color: var(--text);
+}
+
+.card p {
+    margin: 0;
+    font-size: clamp(0.65rem, 2vw, 0.95rem);
+}
+
+.card .value {
+    margin-top: 12px;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: bold;
+    color: var(--value);
 }
