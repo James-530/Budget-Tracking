@@ -15,8 +15,10 @@ Danger: #EF4444
     --text: #1E1E1E;
     --text-light: #6B7280;
     --primary: #1F3A5F;
+    --container: hsl(217, 33%, 67%);
     --border: #1E293B;
-    --accent: hsl(216, 33%, 77%);
+    --header: #1E293B;
+    --accent: #b1c0d8;
 }
 
 body.dark{
@@ -25,7 +27,9 @@ body.dark{
     --text: #F1F5F9;
     --text-light: #94A3B8;
     --primary: #1F3A5F;
+    --container: #1F3A5F;
     --border: #F5F7FA;
+    --header: #1E293B;
     --accent: #1F3A5F;
 }
 
@@ -89,14 +93,14 @@ body{
 
 .header{
     height: 70px;
-    background: var(--bg);
+    background: var(--header);
     padding: 0 clamp(1rem, 2vw, 1.5rem);;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--primary);
 
     position: sticky;
     top: 0;
@@ -125,10 +129,11 @@ body{
     font-size: clamp(1rem, 2vw, 1.5rem);
     margin: 0;
     white-space: nowrap;
+    color: #F1F5F9;
 }
 
 .sidebar-toggle{
-    color: var(--text);
+    color: #F1F5F9;
     border: none;
     background: none;
     font-size: clamp(1rem, 2vw, 1.5rem);
@@ -152,8 +157,8 @@ body{
     width: 250px;
     height: 100vh;
 
-    background: var(--bg);
-    color: var(--text);
+    background: #1F3A5F;
+    color: #F1F5F9;
 
 
     position: fixed;
@@ -171,7 +176,7 @@ body{
     border: none;
     background: none;
     font-size: 1.5em;
-    color: var(--text);
+    color: #F1F5F9;
     cursor: pointer;
     padding: 5px;
 }
@@ -199,7 +204,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #F1F5F9;
     padding-bottom: 20px;
 }
 
@@ -209,7 +214,7 @@ body{
 
 .sidebar-menu{
     list-style: none;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #F1F5F9;
 }
 
 .sidebar-menu li{
@@ -217,7 +222,7 @@ body{
 }
 
 .sidebar-menu a{
-    color: var(--text);
+    color: #F1F5F9;
     text-decoration: none;
     display: block;
     padding: 12px;
@@ -235,3 +240,11 @@ body{
     flex-direction: column;
 }
 
+.card-container{
+    background-color: var(--container);
+    margin: 20px;
+    max-width: 100%;
+    height: 100vh;
+    border: 0;
+    border-radius: 24px;
+}
