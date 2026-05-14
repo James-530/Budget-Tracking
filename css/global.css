@@ -42,6 +42,7 @@ body.dark{
     height: 26px;
 }
 
+
 .switch input{
     opacity: 0;
     width: 0;
@@ -62,7 +63,11 @@ body.dark{
 
 .slider::before{
     position: absolute;
-    content: "";
+    content: "☾";
+    color: gray;
+    align-content: center;
+    text-align: center;
+    font-size: 1.2em;
     height: 26px;
     width: 26px;
     background-color: white;
@@ -76,6 +81,10 @@ input:checked + .slider{
 
 input:checked + .slider::before{
     transform: translateX(24px);
+    content: "☀";
+    color: gray;
+    align-content: center;
+    text-align: center;
 }
 
 body{
@@ -261,6 +270,7 @@ body{
     border: 1px solid var(--text);
     border-radius: 16px;
     text-align: center;
+    align-content: flex-start; 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     color: var(--text);
@@ -279,16 +289,17 @@ body{
     margin: 0 0 10px;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     color: var(--text);
+    margin: 20px;
 }
 
 .card p {
-    margin: 0;
+    margin: 0px;
     font-size: clamp(0.65rem, 2vw, 0.95rem);
 }
 
 .card .value {
-    margin-top: 12px;
-    font-size: clamp(1rem, 2vw, 2rem);
+    margin-top: 40px;
+    font-size: clamp(2rem, 2vw, 3rem);
     font-weight: bold;
     color: var(--value);
 }
