@@ -7,6 +7,7 @@
     <title>Budget Tracking</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -43,26 +44,57 @@
     <main class="main-content">
         <section class="dashboard-section">
             <div class="card-container">
+                <div class="card hero-card">
+                    <h3>Total Balance</h3>
+                    <p class="text-muted">Available across all accounts</p>
+                    <div class="value">₱54,250.00</div>
+                </div>
 
-                <div class="card-container">
+                <div class="card stat-card">
+                    <h3>Total Income</h3>
+                    <p class="text-muted">This Month</p>
+                    <div class="value text-success"> ₱45,000.00</div>
+                </div>
 
-                    <div class="card" id="balanceCard">
-                        <h3>Balance</h3>
-                        <p class="value">3,000</p>
-                    </div>
-                    <div class="card" id="incomeCard">
-                        <h3>Income</h3>
-                        <p class="value">10,000</p>
-                    </div>
-                    <div class="card" id="expensesCard">
-                        <h3>Expenses</h3>
-                        <p class="value">7,000</p>
-                    </div>
-                
+                <div class="card stat-card">
+                    <h3>Total Expenses</h3>
+                    <p class="text-muted">This Month</p>
+                    <div class="value text-danger"> ₱8,120.50</div>
+                </div>
 
                 <div class="card" id="transactionCard">
                     <h3>Last Transactions</h3>
-                    
+                    <div class="transaction-container">
+                        <div class="transaction-item">
+                            <span class="transaction-label">Supermarket Grocery & Household</span>
+                            <span class="transaction-line"></span>
+                            <span class="transaction-price text-danger">- ₱1,000.00</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <span class="transaction-label">Meralco Electricity Bill</span>
+                            <span class="transaction-line"></span>
+                            <span class="transaction-price text-danger">- ₱4,120.50</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <span class="transaction-label">Salary Direct Deposit</span>
+                            <span class="transaction-line"></span>
+                            <span class="transaction-price text-success">₱45,000.00</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <span class="transaction-label">Netflix Premium</span>
+                            <span class="transaction-line"></span>
+                            <span class="transaction-price text-danger">- ₱549.00</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <span class="transaction-label">Coffee</span>
+                            <span class="transaction-line"></span>
+                            <span class="transaction-price text-danger">- ₱180.00</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card" id="chartCard">
