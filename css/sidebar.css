@@ -34,15 +34,15 @@
 
 .sidebar {
     width: 260px;
-    height: 100vh;
+    height: 90vh;
     background: var(--primary);
     color: #F1F5F9;
     position: fixed;
-    top: 0;
+    top: 10;
     left: 0;
     padding: 20px;
     transition: left 0.3s ease;
-    z-index: 200;
+    z-index: 999;
 }
 
 .sidebar-header {

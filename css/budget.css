@@ -1,0 +1,115 @@
+.table-container {
+    background-color: var(--card);
+    border: 1px solid var(--text-light);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: var(--text);
+}
+
+.addBtn {
+    background-color: var(--container);
+    color: var(--text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.add-budget-btn:hover {
+    background-color: var(--value);
+}
+
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.budget-table th {
+    background-color: var(--container);
+    color: var(--text);
+    padding: 14px 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.budget-table th:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.budget-table th:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.budget-table td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    color: var(--text);
+}
+
+.budget-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.budget-table tbody tr:hover {
+    background-color: rgba(148, 163, 184, 0.08);
+}
+
+.budget-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding: 10px;
+    }
+
+    .card, 
+    #chartCard, 
+    #transactionCard,
+    .card-container,
+    .table-container {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .budget-table {
+        min-width: 650px !important;
+    }
+    
+    .budget-table td, 
+    .budget-table th {
+        padding: 12px 8px;
+        font-size: 0.85rem;
+    }
+}

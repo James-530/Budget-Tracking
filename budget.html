@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Tracking</title>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/budget.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -43,12 +43,59 @@
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <main class="main-content">
-        <section class="budget-section">
-            <div class="card-container">
+    <section class="budget-section">
+        <div class="card-container">
             
+            <div class="table-container">
+                
+                <div class="table-header">
+                    <h2>Monthly Budgets</h2>
+                    <button class="addBtn">Add Category</button>
+                </div>
+
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Allocated</th>
+                            <th>Spent</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><strong>Rent & Housing</strong></td>
+                            <td>₱15,000.00</td>
+                            <td>₱15,000.00</td>
+                            <td class="text-muted">₱0.00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Food & Groceries</strong></td>
+                            <td>₱12,000.00</td>
+                            <td>₱8,450.00</td>
+                            <td class="text-success">₱3,550.00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Utilities & Bills</strong></td>
+                            <td>₱5,000.00</td>
+                            <td>₱5,800.00</td>
+                            <td class="text-danger">-₱800.00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Entertainment</strong></td>
+                            <td>₱3,000.00</td>
+                            <td>₱1,200.00</td>
+                            <td class="text-success">₱1,800.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
-        </section>
-    </main>
+            
+        </div>
+    </section>
+</main>
     <script src="js/global.js"></script>
     <script src="js/dashboard.js"></script>
 </body>
