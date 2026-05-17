@@ -16,6 +16,32 @@ const myChart = new Chart(chartCanvas, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#3e75c1' // Matches your light theme --text color
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: '#3e75c1' // Colors the bottom month labels
+                },
+                grid: {
+                    color: '#3e75c1' // Subtle grid lines
+                }
+            },
+            y: {
+                ticks: {
+                    color: '#3e75c1' // Colors the side number labels
+                },
+                grid: {
+                    color: '#3e75c1'
+                }
+            }
+        }
     }
 });

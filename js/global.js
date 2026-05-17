@@ -39,6 +39,4 @@ themeToggle.addEventListener("change", () => {
     } else {
         localStorage.setItem("theme", "light");
     }
-
 });
-
