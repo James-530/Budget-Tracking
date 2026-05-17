@@ -97,10 +97,22 @@
                     </div>
                 </div>
 
-                <div class="card" id="chartCard">
-                    <h3>Chart</h3>
-                    
+                <div id="chartCard" class="card">
+                    <div class="chart-header">
+                        <div class="chart-title-block">
+                            <h3>Financial Overview</h3>
+                            <p class="text-muted">Income vs Expenses over time</p>
+                        </div>
+                        <select id="chartTimeline" class="chart-dropdown">
+                            <option value="6months">Last 6 Months</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+    
+                <div class="chart-wrapper">
+                    <canvas id="dashboardChart"></canvas>
                 </div>
+</div>
             </div>
         </div>
         </section>

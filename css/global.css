@@ -6,7 +6,7 @@
     --primary: #1F3A5F;
     --container: #99adcc;
     --border: #1E293B;
-    --header: #1E293B;
+    --header: #1F3A5F;
     --accent: #b1c0d8;
     --value: #0e3b9a;
 }
@@ -19,7 +19,7 @@ body.dark {
     --primary: #1F3A5F;
     --container: #1F3A5F;
     --border: #F5F7FA;
-    --header: #1E293B;
+    --header: #1F3A5F;
     --accent: #1F3A5F;
     --value: #38BDF8;
 }
@@ -45,6 +45,7 @@ body {
     flex-direction: column;
     transition: margin-left 0.3s ease;
     margin-left: 260px;
+    
 }
 
 .text-danger  { color: #EF4444; }
@@ -89,7 +90,7 @@ body {
 }
 
 input:checked + .slider {
-    background-color: #1F3A5F;
+    background-color: #1E293B;
 }
 
 input:checked + .slider::before {
